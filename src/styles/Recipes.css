@@ -1,0 +1,168 @@
+.recipes-main {
+    margin-left: 250px;
+    padding: 30px;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.recipes-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.recipes-tabs button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.recipes-tabs button:hover {
+    background-color: #e0e0e0;
+}
+
+.recipes-tabs .active-tab {
+    background-color: #b7dfab;
+    color: #333;
+}
+
+.meal-section-wrapper, .snack-section-wrapper {
+    width: 100%; /* 좌우 꽉 차게 사용 */
+    /*padding: 0 40px; !* 좌우 여백만 조금 줌 (화면 끝까지 붙지 않게) *!*/
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+    max-width: 1000px; /* optional */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.meal-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개씩 고정 */
+    gap: 16px;
+}
+
+.recipes-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3개씩 고정 */
+    gap: 16px;
+}
+
+.meal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    height: 100%;
+    min-height: 100px; /* optional */
+}
+
+.recipes-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    height: 100%;
+    min-height: 100px; /* optional */
+}
+
+.meal-card h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.meal-card:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+.snack-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개씩 고정 */
+    gap: 16px;
+}
+
+
+.snack-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.snack-card:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.recipe-link {
+    background: none;
+    border: none;
+    color: #4caf50;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.recipe-link:hover {
+    color: #388e3c;
+}
+
+
+.recipes-tabs a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0; /* 기본 회색 */
+    color: #555; /* 기본 글자 약간 연하게 */
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.recipes-tabs a:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.recipes-tabs .active-tab {
+    background-color: #b7dfab;
+    color: #333;
+}
+
+
