@@ -2,8 +2,10 @@ import '../styles/Sidebar.css';
 import { Link } from 'react-router-dom';
 import settingsIcon from '../assets/settings.png';
 import loginIcon from '../assets/login.png';
+import logoutIcon from '../assets/logout.png';
+import profileIcon from '../assets/profile.png';
 
-export default function Sidebar({ onLoginClick, onSignUpClick, onSettingsClick }) {
+export default function Sidebar({ isLoggedIn, onLoginClick, onSignUpClick, onSettingsClick, onLogoutClick, onProfileClick }) {
     return (
         <div className="sidebar">
             <h2 className="sidebar-title">냠잇(NyamIt)</h2>
@@ -16,16 +18,25 @@ export default function Sidebar({ onLoginClick, onSignUpClick, onSettingsClick }
             </nav>
 
             <div className="sidebar-bottom">
-                <button type="button" className="sidebar-bottom-btn" onClick={onSettingsClick}>
-                    <img src={settingsIcon} alt="Settings" className="sidebar-icon" /> Settings
-                </button>
-                <button type="button" className="sidebar-bottom-btn" onClick={onLoginClick}>
-                    <img src={loginIcon} alt="Login" className="sidebar-icon" /> Login
-                </button>
-                {/*<button type="button" className="sidebar-bottom-btn" onClick={onSignUpClick}>*/}
-                {/*    🔑 Sign up*/}
-                {/*</button>*/}
+                {isLoggedIn ? (
+                    <>
+                        <button type="button" className="sidebar-bottom-btn" onClick={onProfileClick}>
+                            <img src={profileIcon} alt="Profile" className="sidebar-icon"/>
+                            Profile
+                        </button>
+                        <button type="button" className="sidebar-bottom-btn" onClick={onLogoutClick}>
+                            <img src={logoutIcon} alt="Logout" className="sidebar-icon"/>
+                            Logout
+                        </button>
+                    </>
+                ) : (
+                    <button type="button" className="sidebar-bottom-btn" onClick={onLoginClick}>
+                        <img src={loginIcon} alt="Login" className="sidebar-icon"/>
+                        Login
+                    </button>
+                )}
             </div>
         </div>
-    );
+)
+    ;
 }
