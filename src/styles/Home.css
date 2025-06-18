@@ -1,0 +1,57 @@
+.home-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 250px;
+    padding: 50px;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.home-content {
+    flex: 1;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.home-p {
+    font-size: 24px;
+}
+
+.go-button {
+    font-size: 18px;
+    border-radius: 12px;
+    width: 130px;
+    height: 60px;
+    border: none;
+    background-color: #B7DFAB;
+    color: #333; /* 글씨 색은 약간 진하게 */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 부드러운 전환 효과 */
+}
+
+.go-button:hover {
+    background-color: #A2CD94; /* hover 시 약간 더 진한 연녹색 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 부드러운 그림자 효과 */
+}
+
+.go-button:active {
+    transform: translateY(1px); /* 눌린 듯한 느낌 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* 그림자 줄이기 */
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 200px;
+    padding: 50px;
+}
+
+.home-image img {
+    width: auto;
+    max-height: 90vh;
+    border-radius: 12px;
+    object-fit: cover;
+}

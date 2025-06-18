@@ -1,0 +1,47 @@
+.simple-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.simple-modal-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.simple-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.simple-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #b7dfab;
+    color: #333;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.simple-btn:hover {
+    background-color: #a4d49a;
+}
+
+.simple-settings-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 8px 0;
+}

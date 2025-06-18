@@ -1,0 +1,133 @@
+.fasting-main {
+    margin-left: 250px;
+    padding: 30px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.fasting-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열 고정 */
+    gap: 24px; /* 카드 사이 간격 */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.fasting-card {
+    width: 100%;
+    padding: 24px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 위아래 균등 배치 */
+    align-items: center;
+    box-sizing: border-box; /* 패딩 포함 처리 */
+}
+
+.fasting-status-card h2 {
+    font-size: 22px;
+    margin: 8px 0; /* margin 줄이기 (위아래 공백 최소화) */
+}
+
+.timer-text {
+    margin-bottom: 10px; /* 약간만 */
+    min-height: 48px; /* 텍스트 흔들림 방지 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* 남은 공간 차지 */
+}
+
+.fasting-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.start-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #b7dfab;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #a4d49a;
+}
+
+.stop-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f2b7b7;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.stop-btn:hover {
+    background-color: #e89a9a;
+}
+
+.reset-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ccc;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #bbb;
+}
+
+.fasting-history-card h3 {
+    margin-bottom: 16px;
+}
+
+.fasting-history-card .history-list {
+    list-style: none;
+    margin-left: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.fasting-history-card .history-list li {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.fasting-info-text {
+    max-width: 800px;
+    margin: 20px auto 60px auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    padding: 0 20px;
+}
+
+.fasting-info-text h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #222;
+}
