@@ -12,6 +12,7 @@ import './App.css';
 import ProfileModal from './pages/ProfileModal';
 
 import { jwtDecode } from 'jwt-decode';
+import Community from "./pages/Community";
 
 function App() {
     const [isAuthOpen, setIsAuthOpen] = useState(false);
@@ -68,8 +69,8 @@ function App() {
                     <Route path="/dashboard" element={<Dashboard userName={userName} />} />
                     <Route path="/recipes" element={<Recipes />} />
                     <Route path="/recipes/all" element={<AllRecipes />} />
-                    <Route path="/fasting" element={<Fasting />} />
-                    <Route path="/community" />
+                    <Route path="/fasting" element={<Fasting userName={userName} />} />
+                    <Route path="/community" element={<Community/>}/>
                 </Routes>
 
                 <AuthModal

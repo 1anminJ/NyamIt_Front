@@ -18,9 +18,12 @@ h1 {
 .dashboard-card {
     background-color: white;
     border-radius: 12px;
-    padding: 20px;
+    padding: 16px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .greeting-card, .greeting-text {
@@ -38,29 +41,27 @@ h1 {
 .dashboard-section {
     display: flex;
     gap: 20px;
-    flex: 1;
-    min-height: 0;
     align-items: stretch;
     padding-bottom: 20px;
+    height: 300px;
 }
 
 
 .fasting-card {
     flex: 1;
-    justify-content: center;
     text-align: center;
-    padding: 12px !important; /* 임시로 강제 적용 → 캐시 문제 확인용 */
-    height: 100% !important;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    height: 300px;
 }
-
 
 .meal-card {
     flex: 1;
-    justify-content: center;
     text-align: center;
-    text-decoration: none; /* 기본적으로도 밑줄 제거 */
+    text-decoration: none;
     color: inherit;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* 부드럽게 */
+    height: 300px;
 }
 
 
@@ -71,19 +72,6 @@ h1 {
     cursor: pointer; /* 커서 변경도 추가 추천 */
 }
 
-
-.chart-placeholder {
-    width: 80%;
-    height: 120px;
-    background-color: #f0f0f0;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-    font-size: 14px;
-}
 
 .info-card h3 {
     font-size: 20px;
@@ -101,5 +89,21 @@ h1 {
     background-color: #E5F6E0;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    text-decoration: none; /* hover 시에도 밑줄 없애기 */
+}
+
+.info-card * {
+    box-shadow: none !important; /* 자식 요소에 그림자 제거 */
+}
+
+.chart-wrapper {
+    height: 140px;
+    width: 90%;
+    padding-bottom: 30px;
+}
+
+.fasting-card h2 {
+    margin: 5px;
+}
+.fasting-card-text {
+    margin-bottom: 20px;
 }

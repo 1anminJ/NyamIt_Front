@@ -1,0 +1,197 @@
+/* 전체 레이아웃 */
+.community-main {
+    margin-left: 250px;
+    padding: 30px;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+/* 상단 헤더 */
+.community-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.community-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* 게시글 카드 */
+.community-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.community-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.community-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.community-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.community-card p {
+    margin: 4px 0;
+    color: #333;
+}
+
+.post-meta {
+    font-size: 12px;
+    color: #888;
+    margin-top: 8px;
+}
+
+/* 검색창 */
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 200px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: #82ca9d;
+    box-shadow: 0 0 5px rgba(130, 202, 157, 0.5);
+}
+
+/* 글쓰기 버튼 (별도 스타일 유지) */
+.write-button {
+    padding: 8px 14px;
+    background-color: #82ca9d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.write-button:hover {
+    background-color: #6fb488;
+}
+
+/* 글쓰기 폼 */
+.community-write-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+}
+
+.community-write-form input,
+.community-write-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    resize: none;
+}
+
+.community-write-form textarea {
+    height: 200px;
+}
+
+/* 공통 버튼 */
+.btn {
+    padding: 8px 16px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* 버튼 색상 */
+.btn-gray {
+    background-color: #ddd;
+    color: #333;
+}
+
+.btn-red {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.btn-green {
+    background-color: #82ca9d;
+    color: white;
+}
+
+/* 모달 */
+.modal-backdrop {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 96%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    resize: none;
+}
+
+.modal-content textarea {
+    height: 300px;
+    resize: vertical;
+}
+
+/* 모달 하단 버튼 정렬 */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left-buttons,
+.right-buttons {
+    display: flex;
+    gap: 10px;
+}
