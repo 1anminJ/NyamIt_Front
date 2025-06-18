@@ -52,7 +52,6 @@ export default function ProfileModal({ isOpen, onClose }) {
             },
         })
             .then(() => {
-                alert('프로필이 저장되었습니다.');
                 onClose();
             })
             .catch((err) => {

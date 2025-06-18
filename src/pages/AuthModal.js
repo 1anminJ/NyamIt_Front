@@ -11,6 +11,7 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess }) {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
+    // 모달이 열릴 때 초기화
     useEffect(() => {
         if (isOpen) {
             setName('');
@@ -18,7 +19,7 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess }) {
             setEmail('');
             setPassword('');
             setConfirmPassword('');
-            setIsSignUpMode(false); // 열릴 때 기본은 로그인
+            setIsSignUpMode(false);
         }
     }, [isOpen]);
 
@@ -30,9 +31,9 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess }) {
             });
             const token = response.data;
             sessionStorage.setItem('jwtToken', token);
-            alert('로그인 성공!');
-            onLoginSuccess();
+            onLoginSuccess(); // 로그인 성공 후 처리
             onClose();
+            console.log('로그인 성공!');
         } catch (error) {
             alert(`로그인 실패: ${error.response?.data?.message || '서버 오류'}`);
         }
@@ -43,7 +44,6 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess }) {
             alert('비밀번호가 일치하지 않습니다.');
             return;
         }
-
         try {
             await axios.post('http://localhost:8080/api/users/signup', {
                 userId,
@@ -51,8 +51,8 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess }) {
                 email,
                 password,
             });
-            alert('회원가입 성공! 이제 로그인해주세요.');
             setIsSignUpMode(false);
+            alert('회원가입 성공! 로그인해주세요.');
         } catch (error) {
             alert(`회원가입 실패: ${error.response?.data?.message || '서버 오류'}`);
         }
